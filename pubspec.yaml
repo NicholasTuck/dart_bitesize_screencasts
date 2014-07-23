@@ -1,0 +1,11 @@
+name: bitesize_screencasts
+description: This is a project to store code examples used in the Dart Bite-Size Screencasts.
+author: Nicholas Tuck <nick@nicholastuck.com>
+version: 0.0.1
+homepage: https://github.com/nicholastuck/dart_bitesize_screencasts
+dependencies:
+
+dev_dependencies:
+  unittest: any
+  grinder: any
+  grinder_automated_test_task: any
