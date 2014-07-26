@@ -13,14 +13,12 @@ class Customer {
   Customer(this.firstName, this.lastName, this.age, this.wealth);
 
   Customer merge(Customer otherCustomer) {
-    String mergedFirstName = (this.firstName.length > otherCustomer.firstName.length) ?
-                                this.firstName : otherCustomer.firstName;
+    String mergedFirstName = (this.firstName.length > otherCustomer.firstName.length) ? this.firstName : otherCustomer.firstName;
 
-    String mergedLastName = (this.lastName.length > otherCustomer.lastName.length) ?
-                                this.lastName : otherCustomer.lastName;
+    String mergedLastName = (this.lastName.length > otherCustomer.lastName.length) ? this.lastName : otherCustomer.lastName;
 
-    int oldestAge = 0; //max(this.age, otherCustomer.age);
-    num mostWealth = 0; //max(this.wealth, otherCustomer.wealth);
+    int oldestAge = max(this.age, otherCustomer.age);
+    num mostWealth = max(this.wealth, otherCustomer.wealth);
 
     return new Customer(mergedFirstName, mergedLastName, oldestAge, mostWealth);
   }

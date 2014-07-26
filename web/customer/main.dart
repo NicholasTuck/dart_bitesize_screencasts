@@ -15,6 +15,7 @@ void main () {
 
   document.querySelector("#mergeButton").onClick.listen((_) {
     Customer mergedCustomer = bruceWillis.merge(johnMcClane);
+    print("Merged Customer Age: ${mergedCustomer.age}");
     writeCustomerToDiv(mergedCustomer, "mergedCustomer");
   });
 
