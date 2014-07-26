@@ -1,5 +1,8 @@
 library bitesize_screencasts.customer.customer;
 
+import 'dart:math';
+
+
 class Customer {
 
   String firstName;
@@ -16,7 +19,10 @@ class Customer {
     String mergedLastName = (this.lastName.length > otherCustomer.lastName.length) ?
                                 this.lastName : otherCustomer.lastName;
 
-    return new Customer(mergedFirstName, mergedLastName, 1, 0);
+    int oldestAge = 0; //max(this.age, otherCustomer.age);
+    num mostWealth = 0; //max(this.wealth, otherCustomer.wealth);
+
+    return new Customer(mergedFirstName, mergedLastName, oldestAge, mostWealth);
   }
 
 }

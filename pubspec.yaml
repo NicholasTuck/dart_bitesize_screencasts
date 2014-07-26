@@ -4,7 +4,8 @@ author: Nicholas Tuck <nick@nicholastuck.com>
 version: 0.0.1
 homepage: https://github.com/nicholastuck/dart_bitesize_screencasts
 dependencies:
-
+  browser: any
+  intl: any
 dev_dependencies:
   unittest: any
   grinder: any
