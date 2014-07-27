@@ -5,20 +5,20 @@ import "dart:html";
 final wealthFormatter = new NumberFormat("###,###,###", "en_US");
 
 
-Customer bruceWillis = new Customer("Bruce", "Willis", 59, 25000000);
-Customer johnMcClane = new Customer("John", "McClane", 32, 40000);
-
 void main () {
+
+  Customer bruceWillis = new Customer("Bruce", "Willis", 59, 25000000);
+  Customer johnMcClane = new Customer("John", "McClane", 32, 40000);
+
   writeCustomerToDiv(bruceWillis, "customer1");
   writeCustomerToDiv(johnMcClane, "customer2");
 
-  document.querySelector("#mergeButton").onClick.listen(onMergeClick);
-}
+  document.querySelector("#mergeButton").onClick.listen((_) {
+    Customer mergedCustomer = bruceWillis.merge(johnMcClane);
+    print("Merged Customer Age: ${mergedCustomer.age}");
+    writeCustomerToDiv(mergedCustomer, "mergedCustomer");
+  });
 
-void onMergeClick(_) {
-  Customer mergedCustomer = bruceWillis.merge(johnMcClane);
-  print("Merged Customer Age: ${mergedCustomer.age}");
-  writeCustomerToDiv(mergedCustomer, "mergedCustomer");
 }
 
 
