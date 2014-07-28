@@ -2,9 +2,12 @@ import "package:bitesize_screencasts/customer/customer.dart";
 import "package:bitesize_screencasts/customer/customer_location_parser.dart";
 import "package:unittest/unittest.dart";
 import "dart:html";
+import 'package:unittest/html_config.dart';
+import 'package:unittest/html_enhanced_config.dart';
 
 void main() {
 
+  useHtmlEnhancedConfiguration();
 
   group("Customer Location Tests", () {
 
